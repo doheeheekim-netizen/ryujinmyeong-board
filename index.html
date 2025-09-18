@@ -3,41 +3,414 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>류진명 게시판</title>
+    <title>Ask PCI - 질문과 답변</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Font Awesome for icons -->
 </head>
 <body>
-    <div class="container">
-        <h1>류진명 게시판</h1>
-
-        <div class="write-section">
-            <h2>새 글 작성</h2>
-            <textarea id="post-content" placeholder="여기에 글을 작성하세요..."></textarea>
-            <button onclick="addPost()">글 쓰기</button>
+    <header>
+        <div class="container">
+            <div class="logo">Ask PCI</div>
+            <nav>
+                <!-- Optional Navigation -->
+                <!-- <a href="#!">질문하기</a> -->
+                <!-- <a href="#!">최신글</a> -->
+            </nav>
+            <div class="header-right">
+                <form action="https://www.google.com/search" method="get" target="_blank" class="search-form">
+                    <input type="text" name="q" placeholder="Google에서 Ask PCI 검색" class="search-input">
+                    <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
+                </form>
+                <a href="https://www.paypal.com" target="_blank" class="btn btn-primary">충전하기</a>
+            </div>
         </div>
+    </header>
 
-        <div class="posts-section">
-            <h2>게시글 목록</h2>
-            <ul id="posts-list">
-                <!-- 게시글이 여기에 동적으로 추가됩니다 -->
-            </ul>
+    <main class="container">
+        <h1>PCI DSS 관련 질문 & 답변</h1>
+
+        <div class="post-list">
+            <!-- Dummy Posts (Total 30) -->
+
+            <!-- Locked Post Example -->
+            <div class="post-card locked">
+                <div class="post-header">
+                    <i class="fas fa-lock post-lock-icon"></i>
+                    <h2><a href="post.html">🔒 PCI DSS 규정 준수 관련 문의</a></h2>
+                </div>
+                <div class="post-meta">
+                    <span>작성자: admin</span> |
+                    <span>2023.10.27</span> |
+                    <span>조회: 150</span> |
+                    <span>답변: 2</span>
+                </div>
+                <p class="post-excerpt">PCI DSS 규정 준수와 관련하여 몇 가지 궁금한 점이 있습니다. 특히 저희 서비스에서 결제 데이터를 어떻게 안전하게 처리해야 하는지에 대한 구체적인 가이드라인이 필요합니다. </p>
+            </div>
+
+            <div class="post-card">
+                <div class="post-header">
+                    <h2><a href="post.html">안전한 결제 게이트웨이 구축 방법</a></h2>
+                </div>
+                <div class="post-meta">
+                    <span>작성자: user123</span> |
+                    <span>2023.10.26</span> |
+                    <span>조회: 200</span> |
+                    <span>답변: 5</span>
+                </div>
+                <p class="post-excerpt">안전하고 효율적인 결제 게이트웨이를 구축하기 위한 모범 사례와 기술적인 고려 사항에 대해 논의합니다. PCI DSS 준수 요구 사항을 충족하는 것이 중요합니다.</p>
+            </div>
+
+            <div class="post-card locked">
+                <div class="post-header">
+                    <i class="fas fa-lock post-lock-icon"></i>
+                    <h2><a href="post.html">🔒 PCI 인증 절차 상세 설명</a></h2>
+                </div>
+                <div class="post-meta">
+                    <span>작성자: cert_expert</span> |
+                    <span>2023.10.25</span> |
+                    <span>조회: 350</span> |
+                    <span>답변: 8</span>
+                </div>
+                <p class="post-excerpt">PCI 인증을 받기 위한 전체 절차를 단계별로 설명합니다. 신청부터 감사까지 필요한 서류와 준비 사항에 대해 알아보겠습니다. </p>
+            </div>
+
+            <!-- Add 27 more dummy posts similar to the above -->
+            <!-- You can copy and paste the structure, changing the content -->
+            <!-- Example of adding more posts -->
+            <div class="post-card">
+                <div class="post-header">
+                    <h2><a href="post.html">데이터 암호화 방안 Q&A</a></h2>
+                </div>
+                <div class="post-meta">
+                    <span>작성자: coder_guy</span> |
+                    <span>2023.10.24</span> |
+                    <span>조회: 180</span> |
+                    <span>답변: 3</span>
+                </div>
+                <p class="post-excerpt">결제 데이터를 안전하게 보호하기 위한 다양한 암호화 방안에 대해 궁금한 점을 질문하고 답변을 공유합니다.</p>
+            </div>
+            <div class="post-card locked">
+                <div class="post-header">
+                    <i class="fas fa-lock post-lock-icon"></i>
+                    <h2><a href="post.html">🔒 웹사이트 보안 강화 전략</a></h2>
+                </div>
+                <div class="post-meta">
+                    <span>작성자: sec_analyst</span> |
+                    <span>2023.10.23</span> |
+                    <span>조회: 220</span> |
+                    <span>답변: 4</span>
+                </div>
+                <p class="post-excerpt">웹사이트를 SQL Injection, XSS 공격 등으로부터 보호하기 위한 효과적인 보안 강화 전략을 논의합니다.</p>
+            </div>
+            <!-- ... (Repeat for 30 posts total) ... -->
+             <div class="post-card">
+                <div class="post-header">
+                    <h2><a href="post.html">결제 모듈 통합 시 주의사항</a></h2>
+                </div>
+                <div class="post-meta">
+                    <span>작성자: dev_team</span> |
+                    <span>2023.10.22</span> |
+                    <span>조회: 190</span> |
+                    <span>답변: 6</span>
+                </div>
+                <p class="post-excerpt">결제 모듈을 서비스에 통합할 때 발생할 수 있는 문제점과 이를 해결하기 위한 방법을 공유합니다.</p>
+            </div>
+             <div class="post-card locked">
+                <div class="post-header">
+                    <i class="fas fa-lock post-lock-icon"></i>
+                    <h2><a href="post.html">🔒 PCI DSS Level 1 요구사항 해설</a></h2>
+                </div>
+                <div class="post-meta">
+                    <span>작성자: auditor_pro</span> |
+                    <span>2023.10.21</span> |
+                    <span>조회: 400</span> |
+                    <span>답변: 10</span>
+                </div>
+                <p class="post-excerpt">가장 높은 수준인 PCI DSS Level 1 준수를 위한 상세한 요구사항과 검증 방법에 대한 질문 답변입니다.</p>
+            </div>
+            <div class="post-card">
+                <div class="post-header">
+                    <h2><a href="post.html">신용카드 데이터 검증 방법</a></h2>
+                </div>
+                <div class="post-meta">
+                    <span>작성자: validator</span> |
+                    <span>2023.10.20</span> |
+                    <span>조회: 160</span> |
+                    <span>답변: 3</span>
+                </div>
+                <p class="post-excerpt">사용자가 입력한 신용카드 정보의 유효성을 검증하는 다양한 방법과 Luhn 알고리즘 적용에 대한 토론입니다.</p>
+            </div>
+            <div class="post-card locked">
+                <div class="post-header">
+                    <i class="fas fa-lock post-lock-icon"></i>
+                    <h2><a href="post.html">🔒 merchants account 설정 가이드</a></h2>
+                </div>
+                <div class="post-meta">
+                    <span>작성자: merchant_support</span> |
+                    <span>2023.10.19</span> |
+                    <span>조회: 250</span> |
+                    <span>답변: 7</span>
+                </div>
+                <p class="post-excerpt">결제 서비스 제공업체(PSP)의 merchant account를 설정하는 과정에서 자주 묻는 질문과 답변을 모았습니다.</p>
+            </div>
+            <div class="post-card">
+                <div class="post-header">
+                    <h2><a href="post.html">결제 중 오류 처리 방안</a></h2>
+                </div>
+                <div class="post-meta">
+                    <span>작성자: error_solver</span> |
+                    <span>2023.10.18</span> |
+                    <span>조회: 210</span> |
+                    <span>답변: 5</span>
+                </div>
+                <p class="post-excerpt">결제 과정에서 발생할 수 있는 다양한 오류 코드와 이를 해결하기 위한 고객 안내 및 기술적 조치에 대한 내용을 다룹니다.</p>
+            </div>
+            <div class="post-card locked">
+                <div class="post-header">
+                    <i class="fas fa-lock post-lock-icon"></i>
+                    <h2><a href="post.html">🔒 PCI DSS Compliance Checklist</a></h2>
+                </div>
+                <div class="post-meta">
+                    <span>작성자: compliance_mgr</span> |
+                    <span>2023.10.17</span> |
+                    <span>조회: 380</span> |
+                    <span>답변: 9</span>
+                </div>
+                <p class="post-excerpt">PCI DSS 규정 준수를 위한 자체 점검 체크리스트와 각 항목별 이해를 돕는 설명을 제공합니다.</p>
+            </div>
+            <div class="post-card">
+                <div class="post-header">
+                    <h2><a href="post.html">3D Secure 2.0 구현 가이드</a></h2>
+                </div>
+                <div class="post-meta">
+                    <span>작성자: secure_dev</span> |
+                    <span>2023.10.16</span> |
+                    <span>조회: 230</span> |
+                    <span>답변: 4</span>
+                </div>
+                <p class="post-excerpt">향상된 보안을 제공하는 3D Secure 2.0 프로토콜을 서비스에 적용하는 방법에 대한 상세한 가이드입니다.</p>
+            </div>
+            <div class="post-card locked">
+                <div class="post-header">
+                    <i class="fas fa-lock post-lock-icon"></i>
+                    <h2><a href="post.html">🔒 Tokenization vs Encryption</a></h2>
+                </div>
+                <div class="post-meta">
+                    <span>작성자: crypto_nerd</span> |
+                    <span>2023.10.15</span> |
+                    <span>조회: 280</span> |
+                    <span>답변: 6</span>
+                </div>
+                <p class="post-excerpt">결제 데이터 보호를 위한 토큰화(Tokenization)와 암호화(Encryption)의 차이점과 각각의 장단점에 대해 심층적으로 분석합니다.</p>
+            </div>
+            <div class="post-card">
+                <div class="post-header">
+                    <h2><a href="post.html">결제 승인 실패 시 재시도 로직</a></h2>
+                </div>
+                <div class="post-meta">
+                    <span>작성자: retry_logic</span> |
+                    <span>2023.10.14</span> |
+                    <span>조회: 170</span> |
+                    <span>답변: 3</span>
+                </div>
+                <p class="post-excerpt">결제 승인이 실패했을 때, 사용자 경험을 해치지 않으면서 효과적으로 재시도를 처리하는 로직을 설계하는 방법을 논의합니다.</p>
+            </div>
+            <div class="post-card locked">
+                <div class="post-header">
+                    <i class="fas fa-lock post-lock-icon"></i>
+                    <h2><a href="post.html">🔒 PCI DSS Vulnerability Scan</a></h2>
+                </div>
+                <div class="post-meta">
+                    <span>작성자: scanner_guy</span> |
+                    <span>2023.10.13</span> |
+                    <span>조회: 320</span> |
+                    <span>답변: 7</span>
+                </div>
+                <p class="post-excerpt">PCI DSS 준수를 위해 정기적으로 수행해야 하는 취약점 스캔(Vulnerability Scan)의 절차와 결과 해석에 대한 정보를 공유합니다.</p>
+            </div>
+            <div class="post-card">
+                <div class="post-header">
+                    <h2><a href="post.html">카드 소지자 데이터 보호</a></h2>
+                </div>
+                <div class="post-meta">
+                    <span>작성자: data_guardian</span> |
+                    <span>2023.10.12</span> |
+                    <span>조회: 240</span> |
+                    <span>답변: 5</span>
+                </div>
+                <p class="post-excerpt">카드 소지자 데이터(CHD)를 무단 접근으로부터 보호하기 위한 기술적, 관리적 보호 조치에 대해 알아봅니다.</p>
+            </div>
+            <div class="post-card locked">
+                <div class="post-header">
+                    <i class="fas fa-lock post-lock-icon"></i>
+                    <h2><a href="post.html">🔒 POS 시스템 보안 고려사항</a></h2>
+                </div>
+                <div class="post-meta">
+                    <span>작성자: pos_security</span> |
+                    <span>2023.10.11</span> |
+                    <span>조회: 290</span> |
+                    <span>답변: 8</span>
+                </div>
+                <p class="post-excerpt">포인트 오브 세일(POS) 시스템을 운영할 때 PCI DSS를 준수하며 보안을 유지하는 방법에 대한 질문과 답변입니다.</p>
+            </div>
+            <div class="post-card">
+                <div class="post-header">
+                    <h2><a href="post.html">전자상거래 플랫폼 보안</a></h2>
+                </div>
+                <div class="post-meta">
+                    <span>작성자: ecommerce_sec</span> |
+                    <span>2023.10.10</span> |
+                    <span>조회: 200</span> |
+                    <span>답변: 4</span>
+                </div>
+                <p class="post-excerpt">전자상거래 플랫폼을 구축하고 운영하는 과정에서 발생할 수 있는 보안 위협과 대응책을 논의합니다.</p>
+            </div>
+            <div class="post-card locked">
+                <div class="post-header">
+                    <i class="fas fa-lock post-lock-icon"></i>
+                    <h2><a href="post.html">🔒 PCI DSS Self-Assessment Questionnaire (SAQ)</a></h2>
+                </div>
+                <div class="post-meta">
+                    <span>작성자: saq_helper</span> |
+                    <span>2023.10.09</span> |
+                    <span>조회: 450</span> |
+                    <span>답변: 12</span>
+                </div>
+                <p class="post-excerpt">PCI DSS 자가 평가 설문지(SAQ) 작성 방법에 대한 자세한 설명과 자주 묻는 질문에 대한 답변을 제공합니다.</p>
+            </div>
+             <div class="post-card">
+                <div class="post-header">
+                    <h2><a href="post.html">결제 정보 변경 시 처리 방법</a></h2>
+                </div>
+                <div class="post-meta">
+                    <span>작성자: data_changer</span> |
+                    <span>2023.10.08</span> |
+                    <span>조회: 150</span> |
+                    <span>답변: 3</span>
+                </div>
+                <p class="post-excerpt">사용자가 저장된 결제 정보를 변경하거나 삭제할 때, 보안 및 규정 준수를 고려한 처리 절차를 논의합니다.</p>
+            </div>
+            <div class="post-card locked">
+                <div class="post-header">
+                    <i class="fas fa-lock post-lock-icon"></i>
+                    <h2><a href="post.html">🔒 PCI DSS Audit 준비 팁</a></h2>
+                </div>
+                <div class="post-meta">
+                    <span>작성자: audit_coach</span> |
+                    <span>2023.10.07</span> |
+                    <span>조회: 370</span> |
+                    <span>답변: 9</span>
+                </div>
+                <p class="post-excerpt">PCI DSS 감사를 성공적으로 통과하기 위한 사전 준비 사항과 감사 과정에서의 주의점에 대한 팁을 공유합니다.</p>
+            </div>
+            <div class="post-card">
+                <div class="post-header">
+                    <h2><a href="post.html">결제 보안 라이브러리 추천</a></h2>
+                </div>
+                <div class="post-meta">
+                    <span>작성자: lib_fan</span> |
+                    <span>2023.10.06</span> |
+                    <span>조회: 180</span> |
+                    <span>답변: 5</span>
+                </div>
+                <p class="post-excerpt">결제 보안 기능을 구현할 때 유용하게 사용할 수 있는 신뢰할 수 있는 오픈소스 또는 상용 라이브러리에 대한 추천 및 리뷰입니다.</p>
+            </div>
+            <div class="post-card locked">
+                <div class="post-header">
+                    <i class="fas fa-lock post-lock-icon"></i>
+                    <h2><a href="post.html">🔒 Payment Gateway API 연동 가이드</a></h2>
+                </div>
+                <div class="post-meta">
+                    <span>작성자: api_integrator</span> |
+                    <span>2023.10.05</span> |
+                    <span>조회: 260</span> |
+                    <span>답변: 6</span>
+                </div>
+                <p class="post-excerpt">다양한 결제 게이트웨이 API를 서비스에 연동할 때 필요한 절차, 엔드포인트, 파라미터 등에 대한 종합적인 가이드입니다.</p>
+            </div>
+            <div class="post-card">
+                <div class="post-header">
+                    <h2><a href="post.html">이메일 영수증 보안</a></h2>
+                </div>
+                <div class="post-meta">
+                    <span>작성자: email_sender</span> |
+                    <span>2023.10.04</span> |
+                    <span>조회: 140</span> |
+                    <span>답변: 2</span>
+                </div>
+                <p class="post-excerpt">고객에게 발송하는 이메일 영수증에 포함되는 결제 정보의 보안을 강화하는 방법에 대해 논의합니다.</p>
+            </div>
+            <div class="post-card locked">
+                <div class="post-header">
+                    <i class="fas fa-lock post-lock-icon"></i>
+                    <h2><a href="post.html">🔒 PCI DSS ASV Scan</a></h2>
+                </div>
+                <div class="post-meta">
+                    <span>작성자: asv_scanner</span> |
+                    <span>2023.10.03</span> |
+                    <span>조회: 310</span> |
+                    <span>답변: 7</span>
+                </div>
+                <p class="post-excerpt">PCI DSS 준수를 위해 인증된 보안 평가업체(ASV)를 통해 수행해야 하는 스캔의 과정과 중요성에 대한 질문입니다.</p>
+            </div>
+            <div class="post-card">
+                <div class="post-header">
+                    <h2><a href="post.html">결제 로깅 정책</a></h2>
+                </div>
+                <div class="post-meta">
+                    <span>작성자: log_manager</span> |
+                    <span>2023.10.02</span> |
+                    <span>조회: 190</span> |
+                    <span>답변: 4</span>
+                </div>
+                <p class="post-excerpt">PCI DSS 규정에 따라 결제 관련 활동을 어떻게 로깅하고 관리해야 하는지에 대한 정책과 모범 사례를 공유합니다.</p>
+            </div>
+            <div class="post-card locked">
+                <div class="post-header">
+                    <i class="fas fa-lock post-lock-icon"></i>
+                    <h2><a href="post.html">🔒 Remote Access Security</a></h2>
+                </div>
+                <div class="post-meta">
+                    <span>작성자: remote_expert</span> |
+                    <span>2023.10.01</span> |
+                    <span>조회: 270</span> |
+                    <span>답변: 5</span>
+                </div>
+                <p class="post-excerpt">원격 접속 시 발생할 수 있는 보안 취약점과 이를 효과적으로 관리하기 위한 보안 조치에 대한 논의입니다.</p>
+            </div>
+            <div class="post-card">
+                <div class="post-header">
+                    <h2><a href="post.html">결제 시스템 성능 최적화</a></h2>
+                </div>
+                <div class="post-meta">
+                    <span>작성자: perf_optimizer</span> |
+                    <span>2023.09.30</span> |
+                    <span>조회: 220</span> |
+                    <span>답변: 6</span>
+                </div>
+                <p class="post-excerpt">고객 경험 향상을 위해 결제 시스템의 응답 속도와 전반적인 성능을 최적화하는 방법에 대한 질문입니다.</p>
+            </div>
+             <div class="post-card locked">
+                <div class="post-header">
+                    <i class="fas fa-lock post-lock-icon"></i>
+                    <h2><a href="post.html">🔒 Firewall Configuration</a></h2>
+                </div>
+                <div class="post-meta">
+                    <span>작성자: firewall_admin</span> |
+                    <span>2023.09.29</span> |
+                    <span>조회: 300</span> |
+                    <span>답변: 7</span>
+                </div>
+                <p class="post-excerpt">PCI DSS 준수를 위한 적절한 방화벽(Firewall) 설정 및 관리 방법에 대한 상세한 설명입니다.</p>
+            </div>
+
         </div>
-    </div>
+    </main>
 
-    <!-- Supabase SDK -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script>
-      // **여기에 복사한 Supabase URL과 anon public 키를 붙여넣으세요!**
-      const supabaseUrl = 'https://kxvaqxilqxdmacgjrzyp.supabase.co'; // 예: 'https://xxxxx.supabase.co'
-      const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt4dmFxeGlscXhkbWFjZ2pyenlwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgxNzA2MDQsImV4cCI6MjA3Mzc0NjYwNH0.0bS73VjXPJk0gUkKRokGaM5EdGzJ4lsWMCFFlNSpVyE'; // 예: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...'
-
-      const supabase = supabase.createClient(supabaseUrl, supabaseKey);
-
-      // Supabase에서 데이터를 불러오고, 새 글을 추가하는 함수는 script.js에 있습니다.
-      // 페이지 로드 시 게시글 목록 불러오기
-      window.onload = loadPosts;
-    </script>
-
-    <script src="script.js"></script>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Ask PCI. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>

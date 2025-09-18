@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>질문 제목 - Ask PCI</title>
+    <link rel="stylesheet" href="style.css"> <!-- Use the same style.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Ask PCI</div>
+            <div class="header-right">
+                <form action="https://www.google.com/search" method="get" target="_blank" class="search-form">
+                    <input type="text" name="q" placeholder="Google에서 Ask PCI 검색" class="search-input">
+                    <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
+                </form>
+                <a href="https://www.paypal.com" target="_blank" class="btn btn-primary">충전하기</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="post-detail">
+            <h1 class="post-title">🔒 PCI DSS 규정 준수 관련 문의</h1>
+            <div class="post-meta-detail">
+                <span>작성자: admin</span> |
+                <span>2023.10.27</span> |
+                <span>조회: 150</span> |
+                <span>답변: 2</span>
+            </div>
+
+            <div class="post-content">
+                <p>
+                    PCI DSS 규정 준수와 관련하여 몇 가지 궁금한 점이 있습니다. 특히 저희 서비스에서 결제 데이터를 어떻게 안전하게 처리해야 하는지에 대한
+                    구체적인 가이드라인이 필요합니다.
+                </p>
+                <p>
+                    저희는 현재 클라우드 기반의 웹 애플리케이션을 사용하고 있으며, 사용자 등록 및 로그인 기능을 제공하고 있습니다.
+                    결제 정보는 외부 결제 게이트웨이를 통해 처리되고 있지만, 데이터 전송 구간에서의 보안 및 자체 시스템 내에서의
+                    안전한 데이터 관리에 대한 우려가 있습니다.
+                </p>
+                <p>
+                    어떤 보안 프로토콜을 사용해야 하며, 암호화 수준은 어느 정도로 해야 안전한가요? 또한, PCI DSS Compliance Checklist를
+                    어떻게 활용하여 저희 시스템의 취약점을 점검할 수 있을까요?
+                </p>
+            </div>
+
+            <section class="answer-section">
+                <h2>답변</h2>
+                <div class="answer locked-answer">
+                    <div class="answer-header">
+                        <i class="fas fa-lock answer-lock-icon"></i>
+                        <p><strong>답변자:</strong> support</p>
+                        <p><strong>작성일:</strong> 2023.10.28</p>
+                    </div>
+                    <div class="answer-content">
+                        <p>
+                            PCI DSS 규정 준수 관련 문의 주셔서 감사합니다. 고객님의 결제 정보는 안전하게 보호되어야 합니다.
+                            데이터 전송 구간에서는 TLS 1.2 이상의 프로토콜을 사용하고, 저장되는 민감한 데이터는 강력한 알고리즘으로 암호화하는 것이 중요합니다.
+                            자세한 내용은 첨부된 PCI DSS Compliance Guide 문서를 참고하시기 바랍니다. 이 문서는 SAQ(Self-Assessment Questionnaire)를
+                            작성하는 데에도 큰 도움이 될 것입니다.
+                        </p>
+                        <p>
+                            추가적인 기술 지원이나 맞춤형 컨설팅이 필요하시면 언제든지 문의해 주십시오.
+                        </p>
+                    </div>
+                    <div class="content-locked-overlay">
+                        <p>답변 내용을 확인하려면 <a href="#!">로그인 후 잠금 해제</a>하세요.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Optional: Reply/Comment Section -->
+            <!-- <section class="reply-section">
+                <h3>댓글 및 추가 질문</h3>
+                <textarea placeholder="여기에 댓글을 작성하세요..."></textarea>
+                <button class="btn btn-secondary">댓글 작성</button>
+            </section> -->
+
+            <div class="back-to-list">
+                <a href="index.html">목록으로 돌아가기</a>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Ask PCI. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
