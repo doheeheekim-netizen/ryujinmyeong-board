@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>류진명 게시판</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>류진명 게시판</h1>
+
+        <div class="write-section">
+            <h2>새 글 작성</h2>
+            <textarea id="post-content" placeholder="여기에 글을 작성하세요..."></textarea>
+            <button onclick="addPost()">글 쓰기</button>
+        </div>
+
+        <div class="posts-section">
+            <h2>게시글 목록</h2>
+            <ul id="posts-list">
+                <!-- 게시글이 여기에 동적으로 추가됩니다 -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
